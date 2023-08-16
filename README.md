@@ -9,9 +9,9 @@ Repositorio del Grupo Alpha Code para el Cuarto Semestre de la Tecnicatura Unive
 
 Integrantes:
 
-Gimena Perez 
+Nicolás Castro: Semana 01
 
-Nicolás Castro
+Gimena Perez 
 
 Natalia Rivarola 
 
