@@ -183,14 +183,7 @@ public class EstudianteDAO {
         List<Estudiante> estudiantes = estudianteDao.listarEstudiantes();
         estudiantes.forEach(System.out::println);//Función lambda para imprimir
 
-        //Agregar estudiante
-        //var nuevoEstudiante = new Estudiante("Carlos", "Lara", "5494838439", "carlosl@mail.com");
-        //var agregado = estudianteDao.agregarEstudiante(nuevoEstudiante);
-        //if(agregado)
-        //    System.out.println("Estudiante agregado: "+nuevoEstudiante);
-        //else
-        //    System.out.println("No se ha agregado estudiante: "+nuevoEstudiante);
-
+        
 
         //Buscar por id
         //var estudiante1 = new Estudiante(1);
