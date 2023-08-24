@@ -1,28 +1,26 @@
 package presentacion;
 
-import java.util.Scanner;
-
 import conexion.Conexion;
 import datos.EstudianteDAO;
 import dominio.Estudiante;
 
+import java.util.Scanner;
+
 public class SistemaEstudiantesApp {
     public static void main(String[] args) {
-        var salir = false; //Lo hicimos antes
-        var consola = new Scanner(System.in); //Para leer informacion de la consola.
-        //se crea una instancia de la clase servicio, esto lo haceoms fuera del ciclo.
-        var estudianteDao = new EstudianteDAO(); //Esta instancia debe hacerse una vez.
+        var salir = false; //Esto ya lo hicimos antes
+        var consola = new Scanner(System.in); //Para leer informacion de la consola
+        //Se crea una instancia de la clase servicio, esto lo haceoms fuera del ciclo
+        var estudianteDao = new EstudianteDAO(); //Esta instancia debe hacerse una vez
         while (!salir){
             try {
-                mostrarMenu();
-                salir = ejecutarOpciones (consola, estudianteDao); 
+                mostrarMenu();//Este sera el metodo que devolvera un booleano
+                salir = ejecutarOpciones (consola, estudianteDao);//Este arroja una excepcion
+            } catch (Exception e){
+                System.out.println("Ocurrió un error al ejecutar la operacion: " + e.getMessage());
             }
-            catch (Exception e){
-            System.out.println("Ocurrió un error al ejecutar la operacion: " + e.getMessage());
-            }
-        }
-    
-    } // Fin método main
+        }//Fin while
+    } //Fin main
     private static void mostrarMenu(){
         System.out.println("""
                         **** Sistema de estudiantes ****
