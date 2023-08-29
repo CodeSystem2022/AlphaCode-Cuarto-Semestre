@@ -11,11 +11,11 @@ Integrantes:
 
 Nicolás Castro: Semana 01
 
+Eric Maturano: Semana 02
+
+Natalia Rivarola: Semana 03
+
 Gimena Perez 
-
-Natalia Rivarola 
-
-Eric Maturano 
 
 Alessio Daniel 
 
