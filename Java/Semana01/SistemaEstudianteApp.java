@@ -7,32 +7,34 @@ import dominio.Estudiante;
 import java.util.Scanner;
 
 public class SistemaEstudiantesApp {
-    public static void main(String[] args) {
-        var salir = false; //Esto ya lo hicimos antes
-        var consola = new Scanner(System.in); //Para leer informacion de la consola
-        //Se crea una instancia de la clase servicio, esto lo haceoms fuera del ciclo
-        var estudianteDao = new EstudianteDAO(); //Esta instancia debe hacerse una vez
-        while (!salir){
-            try {
-                mostrarMenu();//Este sera el metodo que devolvera un booleano
-                salir = ejecutarOpciones (consola, estudianteDao);//Este arroja una excepcion
-            } catch (Exception e){
-                System.out.println("Ocurrió un error al ejecutar la operacion: " + e.getMessage());
-            }
-        }//Fin while
-    } //Fin main
-    private static void mostrarMenu(){
-        System.out.println("""
-                        **** Sistema de estudiantes ****
-                1- Listar Estudiantes 
-                2- Buscar Estudiantes
-                3- Agregar Estudiante
-                4- Modificar Estudiante
-                5- Eliminar Estudiante
-                6- Salir.
-            """);  
 
-    }
+    //Mostrar Menu
+    public static void main(String[] args) {
+        var salir = false;
+        var consola = new Scanner(System.in);
+        while(!salir){
+            try {
+                mostrarMenu();//Wste sera el metodo que devolvera un booleano
+                salir = ejecutarOpciones(consola, estudianteDao);
+            } catch (Exception e) {
+                System.out.println("Ocurrio un error al ejecutar la operacion: " + e.getMessage());
+            }
+        }//Fin While
+    }//Fin main
+    private static void mostrarMenu() {
+        System.out.println("""
+                ******* Sitema de Estudiantes ********
+                1. Listar Estudiantes
+                2. Buscar Estudiantes
+                3. Agregar estudiantes
+                4. Modificar Estudiante
+                5. Eliminar Estudiante
+                6. Salir
+                Eliga una Opción:
+                """);
+    } //Fin de Mostrar Menu  
+
+
     private static boolean ejecutarOpciones(Scanner consola, EstudianteDAO estudianteDAO){
         var opcion = Integer.parseInt(consola.nextLine());
         var salir = false;
