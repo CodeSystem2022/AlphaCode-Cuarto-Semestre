@@ -15,10 +15,10 @@ Eric Maturano: Semana 02
 
 Natalia Rivarola: Semana 03
 
+Santiago Bordón: Semana 04
+
 Gimena Perez 
 
 Alessio Daniel 
-
-Santiago Bordón 
 
 Carla Rosales 
