@@ -1,5 +1,13 @@
 
 
+
+
+
+
+
+
+
+
 #Notacion exponencial > valores positivos o negativos
 a = 3e5
 print(f'a: {a}')
