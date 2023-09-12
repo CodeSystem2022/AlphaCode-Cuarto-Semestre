@@ -17,7 +17,7 @@ Natalia Rivarola: Semana 03
 
 Santiago Bordón: Semana 04
 
-Gimena Perez 
+Gimena Perez: Semana 05
 
 Alessio Daniel 
 
