@@ -28,7 +28,7 @@ productos.forEach((product)=>
         cart.push({
             id: product.id,
             productName: product.productName,
-            price: product,price,
+            price: product.price,
             quanty: product.quanty,
             img: product.img,
 
