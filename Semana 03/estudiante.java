@@ -1,4 +1,12 @@
-package modelo;
+package utn.estudiantes.modelo;
 
-public class estudiante {
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
+@Entity
+public class Estudiante {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer idEstudiante;
 }
