@@ -19,6 +19,6 @@ Santiago Bordón: Semana 04
 
 Gimena Perez: Semana 05
 
-Alessio Daniel 
+Alessio Daniel : Semana 06
 
 Carla Rosales 
