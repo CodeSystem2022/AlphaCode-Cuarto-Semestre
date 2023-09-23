@@ -35,3 +35,24 @@ const displayCart = () => {
 cartBtn.addEventListener("click",displayCart);
 
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+const decrese = modalBody.querySelector(".quantity-btn-decrese")
+        DecompressionStream.addEventListener("click", ()=> {
+            if(product.quanty !== 1){
+                product.quanty--;
+                displayCart();
+                displayCartCounter();
+            }
+        });
