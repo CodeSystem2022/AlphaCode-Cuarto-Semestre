@@ -8,3 +8,48 @@ print(f'valor: {valor}, Resultado: {resultado}')
 valor = 1
 resultado = bool(valor)
 print(f'valor: {valor}, Resultado: {resultado}')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Sentencias de control con bool
+if (1,):
+    print('Regresa verdadero')
+else:
+    print('Regresa falso')
+
