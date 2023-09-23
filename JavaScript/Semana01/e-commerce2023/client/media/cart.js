@@ -22,4 +22,16 @@ const displayCart = () => {
 
   const modalTitle = document.createElement("div");
         
+  const modalTitle = document.createElement("div");
+  modalTitle.innerText = "Cart";
+  modalTitle.ClassName = "modal-title";
+  modalHeader.append(modalTitle)
+
+  modalContainer.append(modalHeader);
+
+        
 };
+
+cartBtn.addEventListener("click",displayCart);
+
+        
