@@ -48,8 +48,17 @@ const displayCart = () => {
                     <div class="delete-product">❌</div>
             </div>        
             `;
-            modalContainer.append(modalBody); 
+            modalContainer.append(modalBody);           
         });
+         //modal fotter
+    const total = cart.reduce((acc, el) => acc + el.price * el.quanty, 0);
+
+    const modalFooter = document.createElement("div");
+    modalFooter.className = "modal-footer"
+    modalFooter.innerHTML = `
+    <div class="total-price">Total: ${total}</div>
+    `;
+        modalContainer.append(modalFooter);
 };
 
 cartBtn.addEventListener("click",displayCart);
