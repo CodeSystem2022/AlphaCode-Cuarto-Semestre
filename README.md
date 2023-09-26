@@ -21,4 +21,4 @@ Gimena Perez: Semana 05
 
 Alessio Daniel : Semana 06
 
-Carla Rosales 
+Carla Rosales : Semana07
