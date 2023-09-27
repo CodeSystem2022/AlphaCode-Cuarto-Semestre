@@ -5,6 +5,7 @@ Repositorio del Grupo Alpha Code para el Cuarto Semestre de la Tecnicatura Unive
 ![AC](https://user-images.githubusercontent.com/113073790/234140028-4ff97926-97ee-4ae4-ac7f-7bc66e26ad02.jpeg)
 
 💻 Laboratorio IV
+💻 Metodologia de Sistemas 
 
 
 Integrantes:
