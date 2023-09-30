@@ -48,6 +48,16 @@ resultado = bool(valor)
 print(f'Valor de un diccionario con elementos: {valor}, Resultado: {resultado}')
 
 
+#Ciclos
+variable = 17
+while variable:
+    print('Regresa verdadero')
+    break
+else:
+    print('Regresa falso')
+    
+
+
 
 
 
