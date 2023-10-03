@@ -30,6 +30,7 @@ const displayCart = () => {
 
   modalContainer.append(modalHeader);
 //modal Body
+        if (cart.lenght > 0){
         cart.forEach((product) => {
             const modalBody = document.createElement("div");
             modalBody.className = "modal-body";
@@ -79,7 +80,12 @@ const deleteCartProduct =  (id) => {
         
 
 };
-
+} else{
+        const modalText = document.createElement("h2");
+        modalClose.className = "modal-body";
+        modalText.innerText = "your cart is empty";
+        modalContainer.append(modalText);
+}
         
 
 
