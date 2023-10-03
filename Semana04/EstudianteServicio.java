@@ -18,6 +18,20 @@ public class EstudianteServicio implements IEstudianteServicio{
         List<Estudiante> estudiantes = estudianteRepositorio.findAll();
         return estudiantes;
     }
+    
+     String nl = System.lineSeparator();
+    
+    public static void main(String[] args) {
+        logger.info("Iniciando la aplicaci�n...");
+        //Levantar la fabrica de Spring
+        SpringApplication.run(EstudiantesApplication.class, args);
+        logger.info("Aplicaci�n Finalizada!");
+    }
+    
+    @Override
+    public void run(String... args) throws Exception {
+        logger.info("Ejecutando el m�todo run de Spring...");
+    }
 
     @Override
     public Estudiante buscarEstudiantePorId(Integer idEstudiante) {
