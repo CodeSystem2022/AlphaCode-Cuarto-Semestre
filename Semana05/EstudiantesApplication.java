@@ -49,6 +49,6 @@ public class EstudiantesApplication implements CommandLineRunner {
 			4. Modificar Estudiante
 			5. Eliminar Estudiante
 			6. Salir
-			Eliga una opción:""");
+			Eliga una opción:""")
 	}
 
