@@ -2,6 +2,7 @@ const modalContainer = document.getElementById("modal-container");
 const modalOverlay = document.getElementById("modal-overlay");
 
 const cartBtn = document.getElementById("cart-btn");
+const cartCounter = document.getElementById("cart-counter");
 
 const displayCart = () => {
         modalContainer.innerHTML = "";
@@ -76,10 +77,25 @@ cartBtn.addEventListener("click",displayCart);
 
 const deleteCartProduct =  (id) => {
   const foundId = cart.findIndex((element)=> element.id === id);
+        
   console.log(foundId);
         
 
 };
+
+const displayCartCounter =()> {
+  const cartLenght = cart.reduce((acc, el) => acc + el.quanty, 0);
+  if (cartLenght > 0) {
+     cartCounter.style.display = "block";
+     cartCounter.innerText = cartLenght;
+  } else {
+    cartCounter.style.display = "none";
+  }
+};
+ 
+  
+   
+}
 } else{
         const modalText = document.createElement("h2");
         modalClose.className = "modal-body";
