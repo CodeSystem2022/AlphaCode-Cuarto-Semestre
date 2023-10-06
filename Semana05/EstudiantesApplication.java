@@ -64,6 +64,36 @@ private boolean ejecutarOpciones(Scanner consola){
                 List<Estudiantes2022> estudiantes = estudianteServicio.listarEstudiantes();
                 estudiantes.forEach((estudiante -> logger.info(estudiante.toString()+nl)));
             }
+		case 2 ->{//Buscar estudiante por id
+	        logger.info("Digite el id estudiante buscar: ");
+		var idEstudiante = Integer.parseInt(consola.nextLine());
+		Estudiante2022 estudiante =
+			estudianteServicio.buscarEstudiantePorId(idEstudiante));
+		if(estudiante != null)
+			logger.info("Estudiante encontrado: "+ estudiante + nl);
+		else
+			logger.info("Estudiante NO encontrado: "+ estudiante +nl);
+		}
+		case 3 -> { //Agregar estudiante
+		     logger.info("Agregar estudiante: "+nl);
+		     logger.info("Nombre: ");
+		     var nombre = consola.nextLine();
+		     logger.info("Apellido: ");
+		     var apellido = consola.nextLine();
+		     logger.info("Telefono: ");
+		     var telefono = consola.nextLine();
+		     logger.info("Email: ");
+		     var email = consola.nextLine();
+		     // Crear el objeto estudiante sin el id
+		     var estudiante = new Estudiante2022();
+		     estudiante.setNombre(nombre);
+		     estudiante.setApellido(apellido);
+		     estudiante.setTelefono(telefono);
+		     estudiante.setEmail(email);
+		     estudianteServicio.guardarEstudiante(estudiante);
+		     logger.info("Estudiante agregado: "+estudiante+nl);
+		}
+		     
         }//Fin switch
         return salir;
 }
