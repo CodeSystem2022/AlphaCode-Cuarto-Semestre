@@ -1,9 +1,5 @@
+from mi_clase import MiClase
 
+# help(MiClase)
 
-'''
-Podemos crear documentación
-'''
-
-"""
-estas son las dos maneras de documentar
-"""
+print(MiClase.__doc__)
