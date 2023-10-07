@@ -24,3 +24,5 @@ Gimena Perez: Semana 05
 Alessio Daniel : Semana 06
 
 Carla Rosales : Semana07
+
+Cintia Contreras : Semana08
