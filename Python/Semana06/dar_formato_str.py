@@ -10,3 +10,20 @@ mensaje_con_formato = 'Hola %s %s .Tu sueldo es %.2f' # % persona # Aquí le pas
 print(mensaje_con_formato%persona)
 
 
+
+
+
+
+
+
+
+
+
+
+
+mensaje = 'Nombre {n} Edad {e} Sueldo {s:.2f}'.format(n=nombre, e=edad, s=sueldo)
+# print(mensaje)
+
+diccionario = {'nombre': 'Ivan', 'edad': 35, 'sueldo': 8000.00}
+mensaje = 'Nombre {dic[nombre]} Edad {dic[edad]} Sueldo {dic[sueldo]:.2f}'.format(dic=diccionario)
+print(mensaje)
