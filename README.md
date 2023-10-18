@@ -26,3 +26,7 @@ Alessio Daniel : Semana 06
 Carla Rosales : Semana07
 
 Cintia Contreras : Semana08
+
+Nicolás Castro: Semana 09
+
+Eric Maturano: Semana 10
