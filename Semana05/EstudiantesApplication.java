@@ -43,7 +43,7 @@ public void run(String... args) throws Exception {
 }
 	
 private void mostrarMenu(){
-	logger.info(nl);
+	//logger.info(nl);
 	logger.info("""
 		******* Sistema de Estudiantes *******
 		1. Listar Estudiantes
@@ -93,6 +93,26 @@ private boolean ejecutarOpciones(Scanner consola){
 		     estudianteServicio.guardarEstudiante(estudiante);
 		     logger.info("Estudiante agregado: "+estudiante+nl);
 		}
+		case 5 -> { //Eliminar Estudiante
+			logger.info("Eliminar estudiante: "+nl);
+			logger.info("Digite el id estudiante: "+nl);
+			var idEstudiante = Integer.parseInt(consola.nextLine());
+			// Buscamos el id estudiante a eliminar
+			var estudiante = estudianteServicio.buscarEstudiantePorId(idEstudiante);
+			if(estudiante != null){
+			    estudianteServicio.eliminarEstudiante(estudiante);
+				logger.info("Estudiante eliminado: "+estudiante+nl);
+			}
+			else
+			    logger.info("Estudiante NO encontrado con id: "+estudiante+nl);
+		}
+		case 6 -> {//Salir
+		    logger.info("Hasta pronto!"+nl+nl);
+		    salir = true;
+		}
+		default -> logger.info("Opcion no reconocida: "+ opcion+nl);	
+				
+			
 		     
         }//Fin switch
         return salir;
