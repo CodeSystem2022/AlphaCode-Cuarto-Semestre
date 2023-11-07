@@ -13,6 +13,8 @@ public class LibroFrom extends JFrame {
     public LibroFrom(LibroServicio libroServicio){
         this.libroServicio = libroServicio;
         iniciarForma();
+        agregarButton.addActionListener(e -> agregarLibro());
+        
     }
 
     private void iniciarForma(){
@@ -40,5 +42,11 @@ public class LibroFrom extends JFrame {
     this.tablaModeloLibros.setColumnIdentifiers(cabecera);
     // Instanciar el objeto de Jtable
     this.tablaLibros =new JTable(tablaModeloLibros);
-}
+    }
+    
+    private void agregarLibro() {
+        //Leer los valores del Formulario
+        if(libroTextoTextField.getText().equals("")) {
+            mostrarMensaje("Ingrese el nombre del libro");
+        }        
 }
