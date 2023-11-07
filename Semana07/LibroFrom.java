@@ -20,5 +20,25 @@ public class LibroFrom extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
         setSize(900, 700);
-    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    private void createUIComponents() {
+    this.tablaModeloLibros = new DefaultTableModel(0,5);
+    String[] cabecera = {"Id", "Libro", "Autor", "Precio", "Existencias"};
+    this.tablaModeloLibros.setColumnIdentifiers(cabecera);
+    // Instanciar el objeto de Jtable
+    this.tablaLibros =new JTable(tablaModeloLibros);
+}
 }
