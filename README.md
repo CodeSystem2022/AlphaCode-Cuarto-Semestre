@@ -22,3 +22,5 @@ Alessio Daniel
 Santiago Bordón 
 
 Carla Rosales 
+
+Cintia Contreras
