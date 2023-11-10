@@ -40,8 +40,9 @@ public class LibroFrom extends JFrame {
             }
         });
         modificarButton.addActionListener(e -> modificarLibro());
+        eliminarButton.addActionListener(e -> eliminarLibro());
     }
-   
+
     private void iniciarForma(){
         setContentPane(panel);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -83,67 +84,82 @@ public class LibroFrom extends JFrame {
         // los indices de las columnas inician en 0
         var renglon = tablaLibros.getSelectedRow();
         if(renglon != -1){
-        String idLibro = tablaLibros.getModel().getValueAt(renglon, 0).toString();
+            String idLibro = tablaLibros.getModel().getValueAt(renglon, 0).toString();
         }
-    private void modificarLibro(){
-        if(this.idTexto.equals("")){
-            mostrarMensaje("Debes seleccionar un registro en la tabla");
-        }
-        else {
-            // Verificamos que nombre del libro no sea nulo
-            if(libroTexto.getText().equals("")){
-                mostrarMensaje("Digite el nombre del libro...");
-                libroTexto.requestFocusInWindow();
-                return;
+        private void modificarLibro(){
+            if(this.idTexto.equals("")){
+                mostrarMensaje("Debes seleccionar un registro en la tabla");
             }
-            
-        }
-    }
+            else {
+                // Verificamos que nombre del libro no sea nulo
+                if(libroTexto.getText().equals("")){
+                    mostrarMensaje("Digite el nombre del libro...");
+                    libroTexto.requestFocusInWindow();
+                    return;
+                }
 
-    private void limpiarFormulario(){
-        libroTexto.setText("");
-        autorTexto.setText("");
-        precioTexto.setText("");
-        existenciasTexto.setText("");
-    }
-
-    private void mostrarMensaje(String mensaje){
-        JOptionPane.showMessageDialog(this, mensaje);
-    }
-
-    private void createUIComponents(){
-        idTexto = new JTextField("");
-        idTexto.setVisible(false);
-        this.tablaModeloLibros = new DefaultTableModel(0, 5){
-            @Override
-            public boolean isCellEditable(int row, int column){
-               return false; 
             }
-        };
-            
-        String[] cabecera = {"Id", "Libro", "Autor", "Precio", "Existencias"};
-        this.talbaModeloLibros.setColumIdentifiers(cabecera);
-        //Instanciar el objeto de JTable
-        this.tablaLibros = new JTable(tablaModeloLibros);
-        listarLibros();
-    }
+        }
 
-    private void listarLibros(){
-        //Limpiar la tabla
-        tablaModeloLibros.setRowCount(0);
-        //Obtener los libros de la BD
-        var libros = libroServicio.listarLibros();
-        //Iteramos cada libro
-        libros.forEach((Libro) -> {//Función lambda
-            //Creamos cada registro para agregarlos a la tabla
-            Object [] renglonLibro = {
-                    libro.getIdLibro(),
-                    libro.getNombreLibro(),
-                    libro.getAutor(),
-                    libro.getPrecio(),
-                    libro.getExistencias()
+        private void limpiarFormulario(){
+            libroTexto.setText("");
+            autorTexto.setText("");
+            precioTexto.setText("");
+            existenciasTexto.setText("");
+        }
+
+        private void mostrarMensaje(String mensaje){
+            JOptionPane.showMessageDialog(this, mensaje);
+        }
+
+        private void createUIComponents(){
+            idTexto = new JTextField("");
+            idTexto.setVisible(false);
+            this.tablaModeloLibros = new DefaultTableModel(0, 5){
+                @Override
+                public boolean isCellEditable(int row, int column){
+                    return false;
+                }
             };
-            this.tablaModeloLibros.addRow(renglonLibro);
-        });
+            String[] cabecera = {"Id", "Libro", "Autor", "Precio", "Existencias"};
+            this.talbaModeloLibros.setColumIdentifiers(cabecera);
+            //Instanciar el objeto de JTable
+            this.tablaLibros = new JTable(tablaModeloLibros);
+            listarLibros();
+        }
+        private void eliminarLibro(){
+            var renglon = tablaLibros.getSelectedRow();
+            if(renglon != -1){
+                String idLibro =
+                        tablaLibro.getModel().getValueAt(renglon, 0) .toString();
+                var libro = new Libro();
+                libro.setIdLibro(Integer.parseInt(idlibro));
+                libroServicio.eliminarLibro(libro);
+                monstrarMensaje("Libro "+idLibro+"ELIMINADO");
+                limpiarFormulario();
+                listarLibros();
+            }
+            else{
+                mostrarMensaje("No se ha seleccionado ningun libro de la tabla a eliminar");
+            }
+        }
+
+        private void listarLibros(){
+            //Limpiar la tabla
+            tablaModeloLibros.setRowCount(0);
+            //Obtener los libros de la BD
+            var libros = libroServicio.listarLibros();
+            //Iteramos cada libro
+            libros.forEach((Libro) -> {//Función lambda
+                //Creamos cada registro para agregarlos a la tabla
+                Object [] renglonLibro = {
+                        libro.getIdLibro(),
+                        libro.getNombreLibro(),
+                        libro.getAutor(),
+                        libro.getPrecio(),
+                        libro.getExistencias()
+                };
+                this.tablaModeloLibros.addRow(renglonLibro);
+            });
+        }
     }
-}
