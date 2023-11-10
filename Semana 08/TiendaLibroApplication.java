@@ -5,6 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
 
+  import java.awt.EvenQueue;
+
 @SpringBootApplication
 public class TiendaLibrosApplication {
 
@@ -13,5 +15,13 @@ public class TiendaLibrosApplication {
 	}
 
 	ConfigurableApplicationContext contextSpring =
-			new SpringApplicationBuilder(TiendaLibrosApplication.class)
+                            new SpringApplicationBuilder(TiendaLibrosApplication.class)
+                    .headless(false)
+                    .web(WebApplicationType.NONE)
+                    .run(args);
+    //Ejecutamos el codigo para cargar el formulario
+    EventQueue.invokeLater(() -> {
+        //Obtener el objeto from a traves del spring
+        LibroFrom LibroFrom = contextoSpring.getBean(LibroFrom.class);
+    })
 }
