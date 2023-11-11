@@ -11,17 +11,18 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class TiendaLibrosApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TiendaLibrosApplication.class, args);
-	}
-
+	
 	ConfigurableApplicationContext contextSpring =
                             new SpringApplicationBuilder(TiendaLibrosApplication.class)
                     .headless(false)
                     .web(WebApplicationType.NONE)
                     .run(args);
     //Ejecutamos el codigo para cargar el formulario
-    EventQueue.invokeLater(() -> {
+    EventQueue.invokeLater(() -> { //Método Lamba
         //Obtener el objeto from a traves del spring
         LibroFrom LibroFrom = contextoSpring.getBean(LibroFrom.class);
-    })
+	libroFrom.setVisible(true);
+    });
+ }
+		
 }
