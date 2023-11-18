@@ -6,21 +6,32 @@ Repositorio del Grupo Alpha Code para el Cuarto Semestre de la Tecnicatura Unive
 
 💻 Laboratorio IV
 
+💻 Metodologia de Sistemas 
 
 Integrantes:
 
-Nicolás Castro: Semana 01
-
-Gimena Perez 
-
-Natalia Rivarola 
-
-Eric Maturano 
-
-Alessio Daniel 
-
-Santiago Bordón 
-
-Carla Rosales 
-
-Cintia Contreras
+- Nicolás Castro: Semana 01
+- 
+- Eric Maturano: Semana 02
+- 
+- Natalia Rivarola: Semana 03
+- 
+- Santiago Bordón: Semana 04
+- 
+- Gimena Perez: Semana 05
+- 
+- Alessio Daniel: Semana 06
+- 
+- Carla Rosales: Semana 07
+- 
+- Cintia Contreras: Semana 08
+- 
+- Nicolás Castro: Semana 09
+- 
+- Eric Maturano: Semana 10
+- 
+- Carla Rosales
+- 
+- Cintia Contreras
+- 
+- Natalia Rivarola: Semana 11
