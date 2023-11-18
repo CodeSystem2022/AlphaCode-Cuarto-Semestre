@@ -31,4 +31,6 @@ Nicolás Castro: Semana 09
 
 Eric Maturano: Semana 10
 
+Carla Rosales
+Cintia Contreras
 Natalia Rivarola: Semana 11
