@@ -32,6 +32,3 @@ Nicolás Castro: Semana 09
 Eric Maturano: Semana 10
 
 Natalia Rivarola: Semana 11
-
-
-Santiago Bordón: Semana 12
