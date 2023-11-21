@@ -9,7 +9,7 @@ def run():
   countries = list(map(lambda x: x['Country'], data))
   percentages = list(map(lambda x: x['World Population Percentage'], data))
   charts.generate_pie_chart(countries, percentages)
-  '''
+  
   country = input('Type Country => ')
   print(country)
 
@@ -20,6 +20,6 @@ def run():
     print(country)
     labels, values = utils.get_population(country)
     charts.generate_bar_chart(country['country'], labels, values)
-'''
+
 if __name__ == '__main__':
   run()
