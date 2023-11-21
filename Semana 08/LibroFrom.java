@@ -40,6 +40,28 @@ public class LibroFrom extends JFrame {
         setLocation(x, y);
     }
 
+     //Creamos el objeto libro
+        var libro = new Libro(null, nombreLibro, autor, precio, existencias);
+          libro.setNombreLibro(nombreLibro);
+          libro.setAutor(autor);
+          libro.setPrecio(precio);
+          libro.setExistencias(existencias);
+        this.libroServicio.guardarLibro(libro);
+        mostrarMensaje("Se agrego el libro...");
+        limpiarFormulario();
+        listarLibros();
+    }
+    private void limpiarFormulario(){
+        libroTexto.setText("");
+        autorTexto.setText("");
+        precioTexto.setText("");
+        existenciasTexto.setText("");
+    }
+
+    private void mostrarMensaje(String mensaje){
+        JOptionPane.showMessageDialog(this, mensaje);
+    }
+
     private void createUIComponents() {
         this.tablaModeloLibros = new DefaultTableModel(0, 5);
         String[] cabecera = {"Id", "Libro", "Autor", "Precio", "Existencias"};
